@@ -4,6 +4,7 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 5px;
+    font-size: 14px;
 
 }
 
@@ -15,7 +16,7 @@ body{
     justify-content:space-around;
     gap: 5px;
     align-items: center;
-    background-color: black;
+    background-color: transparent;
     height: 100vh;
     padding: 10px;
 }
@@ -24,28 +25,55 @@ body{
     position: relative;
     max-width: 200px;
     height: 200px;
-    background-color: blue;
     text-align: center;
+    padding: 0;
 }
 
 
 .contenedor .gatos .nombre {
-    background-color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: transparent;
     color: black;
     position:absolute;
     top: 105%;
     left: 25%;
     min-width: 100px;
     border-radius: 5px;
+    padding: 2px;
 }
 
 .contenedor .gatos:hover .nombre {
-    background-color: rgb(183, 195, 195);
+    background-color: rgb(255, 254, 254);
     color: black;
     position:absolute;
     top: 105%;
     left: 25%;
+    max-width: 100px;
 }
+
+
+.contenedor .gatos:hover .nombre::before {
+    position: absolute;
+    top:-28px;
+    left: 35%;
+    content: "";
+    width: 0;
+    color: rgb(244, 240, 240);
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid rgb(244, 240, 240);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+
+}
+
+.contenedor .gatos .nombre:hover .texto:hover {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+    display: inline-block;
+}
+
+
 
 img{
 
