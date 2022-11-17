@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color:azure;
+}
+
+header{
+    display: flex;
+    background: black;
+    justify-content:space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    
+    
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    background-color:black;
+    box-sizing: border-box;
+}
+
+nav a {
+    padding: 10px;
+    background: rgb(83, 68, 68);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+a:hover {
+
+    color:rgb(232, 177, 105) ;
+
+}
+
+.logo {
+    display: flex;
+    align-items:center ;
+    
+}
+
+img {
+    height: 100px;
+    width: 50;
+}
+
+@media (max-width: 600px){
+    header{
+
+       /*background: rgb(82, 9, 9);*/
+        flex-direction: column;
+        align-items: center;
+
+        
+        
+    }
+}
