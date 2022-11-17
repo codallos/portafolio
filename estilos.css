@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.padre{
+
+    /*background-color: black;*/
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 30%;
+}
+
+
+a{
+
+    color: white;
+    text-decoration: none;
+    background-color: brown;
+    width: 200px;
+    padding:0 20px;
+    margin: 5px;
+    height: 100%;
+    text-align: center;
+    
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+    
+    align-items: center;
+
+
+}
