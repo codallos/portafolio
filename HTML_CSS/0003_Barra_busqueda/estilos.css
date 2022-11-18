@@ -1,0 +1,96 @@
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+.body{
+
+  box-sizing: border-box;
+  margin: 0;
+  
+  
+}
+
+.caja{
+    margin-top: 25px;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    display: flex;
+    justify-content:flex-end;
+    padding: 2px;
+  }
+
+.caja:hover{
+  border: 2px solid rgba(100, 105, 132, 0.6);
+  box-shadow: 5px 0px 2px rgba(84, 90, 122, 0.6);
+} 
+
+
+.caja .iconos_grupo {
+  display: flex;
+}
+
+
+.caja .iconos_grupo .boton{
+  text-align: center;
+  padding: 0;
+  outline: none;
+  border-radius: 20px;
+  border: none;
+  background-color:transparent;
+  
+  color: rgb(56, 56, 154);
+  cursor: pointer;
+}
+
+
+.caja .iconos_grupo .boton:hover{
+
+  color: rgb(200, 78, 7);
+  
+
+}
+
+#input1{
+    flex-grow: 1;
+    border-radius: 30px;
+    border: none;
+    padding-left: 5px;
+    
+    
+  }
+
+#input1:focus{
+   outline: none;
+   padding-left: 5px;
+}
+
+@media (max-width:250px) {
+  #input1{
+    flex-grow: 0 0 auto;
+    border-radius: 5px;
+    border: none;
+    max-width: 100px;
+    
+  }
+}
