@@ -38,6 +38,7 @@
     display: flex;
     justify-content:flex-end;
     padding: 2px;
+    min-height: 35px;
   }
 
 .caja:hover{
