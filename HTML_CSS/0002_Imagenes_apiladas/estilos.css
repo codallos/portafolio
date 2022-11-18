@@ -43,7 +43,7 @@ body{
 }
 
 .contenedor .gatos:hover .nombre {
-    background-color: rgb(255, 254, 254);
+    background-color: rgb(244, 240, 240);
     color: black;
     position:absolute;
     top: 105%;
@@ -86,6 +86,13 @@ img{
     background-color: black;
     border: 3px solid white;
     z-index: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+img:hover{
+ transform: translateY(-15px);
+
 }
 
 @media (max-width:580px){
