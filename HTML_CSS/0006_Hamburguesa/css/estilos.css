@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body main {
+  background: radial-gradient(#f37670, #E22E32);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+body main header {
+  background-color: rgba(243, 119, 112, 0.3607843137);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+body main header .logo-img {
+  width: 80px;
+  height: 80px;
+}
+body main header .logo-img a {
+  min-width: 100%;
+  min-height: 100%;
+}
+body main header .logo-img a img {
+  width: 100%;
+  height: 100%;
+}
+body main header ul {
+  display: flex;
+  gap: 10px;
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+body main header ul a {
+  text-decoration: none;
+  color: #fff;
+}
+body main header ul a li {
+  list-style: none;
+  font-weight: bold;
+  font-size: 1.3em;
+  display: block;
+  padding: 4px;
+}
+body main header ul a:hover {
+  background-color: #E22E32;
+  border-radius: 10px;
+}
+body main .principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 150px;
+  max-width: 800px;
+  margin: auto;
+}
+body main .principal .boxtext h1 {
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-size: 2.8em;
+}
+body main .principal .boxtext p {
+  line-height: 1.5;
+}
+body main .principal .boxtext .boton {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+}
+body main .principal .grande-imagen {
+  min-width: 150px;
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .principal .grande-imagen img {
+  width: 100%;
+  height: 100 body main .principal .grande-imagen img;
+  text-align: center;
+}
+body main footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+body main footer ul {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  list-style: none;
+  font-size: 2.3em;
+}
+body main footer ul a li {
+  color: #fff;
+  display: flex;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+body main footer ul a li ion-icon {
+  margin: 0;
+  padding: 0;
+  transition: transform 0.5s ease-in-out;
+}
+body main footer ul a li ion-icon:hover {
+  transform: translateY(-15px);
+}
+
+@media (min-width: 450px) {
+  body main {
+    background-color: black;
+  }
+  body main header {
+    background-color: rgba(255, 255, 255, 0.3607843137);
+  }
+  body main .principal {
+    flex-direction: row;
+    border: 1px solid;
+    /*
+                    .boxtext{
+
+                        h1{
+                            letter-spacing: 1px;
+                            line-height: 1.5;
+                            font-size: 3em;
+
+
+                        }
+
+                        p{
+                           font-size:  1.8em;
+                        }
+                }*/
+  }
+  body main .principal .boxtext p {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+}/*# sourceMappingURL=estilos.css.map */

@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+
+    main{
+
+        background:radial-gradient(#f37670,#E22E32);
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+
+        header{
+            background-color: #f377705c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 10px;
+            
+    
+    
+            .logo-img{
+
+              
+                width: 80px;
+                height: 80px;
+                
+                
+                
+    
+               
+                a{
+                    min-width: 100%;
+                    min-height: 100%;
+                    
+                   
+                    img{
+
+                        
+                        width: 100%;
+                        height: 100%;
+
+                    }
+
+                }               
+    
+            }
+            ul{
+                display: flex;
+                gap: 10px;
+                
+                flex-grow: 1;
+                justify-content: space-evenly;
+                
+                
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    li{
+                        list-style: none;
+                        font-weight: bold;
+                        font-size: 1.3em;
+                        display: block;
+                        padding: 4px;
+                       
+                        
+                    }
+    
+                    &:hover{
+                        background-color: #E22E32;
+                        border-radius: 10px;
+                    }
+                }
+    
+            }
+        }
+    
+        .principal{
+           
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 150px;
+            
+            max-width: 800px;
+            margin: auto;
+
+            .boxtext{
+
+                h1{
+                    letter-spacing: 1px;
+                    line-height: 1.5;
+                    font-size: 2.8em;
+                    
+                }
+        
+                p{
+                    line-height: 1.5;
+                }
+        
+                .boton{
+                    margin-top: 20px;
+                    background-color: #fff;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    border: none;
+                }
+
+            }
+
+            .grande-imagen{
+              
+                min-width: 150px;
+                min-height: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 100%;
+                    height: 100&;
+                    text-align: center;
+                }
+            }
+    
+           
+    
+        }
+
+
+        footer{
+
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            
+
+            ul{
+
+               
+                
+                display: flex;
+                justify-content: end;
+                gap:20px;
+                
+                list-style: none;
+                font-size:2.3em;
+                
+                a{
+                    
+                    li{
+                        color: #fff;
+                        display: flex;
+                        margin-bottom: 20px;
+                        margin-right: 10px;
+                        
+                        
+                        ion-icon{
+                            margin: 0;
+                            padding: 0;
+                            transition: transform 0.5s ease-in-out;
+                            &:hover{
+                                
+                                transform: translateY(-15px);
+                            }
+                        }
+                    }
+                }
+        
+
+            }
+
+        }
+    
+
+    }
+
+    
+   
+
+}
+
+@media (min-width:450px) {
+
+    body{
+
+        main{
+        
+            background-color: black;
+    
+            header{
+                background-color: #ffffff5c;
+            }
+
+            .principal{
+                flex-direction: row;
+                border: 1px solid;
+
+
+
+                .boxtext p{
+                    font-size:  20px;
+                    line-height: 1.8;
+                 }
+/*
+                .boxtext{
+
+                    h1{
+                        letter-spacing: 1px;
+                        line-height: 1.5;
+                        font-size: 3em;
+                        
+                        
+                    }
+                    
+                    p{
+                       font-size:  1.8em;
+                    }
+            }*/
+    
+            
+    
+        }
+
+    }
+}
+}
