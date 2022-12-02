@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #414041;
+  transition: 0.5s;
+  /* tema light*/
+}
+body .padre {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #363834;
+  box-shadow: 0 0 10px #000;
+}
+body .padre .pantalla {
+  background-color: #B3BFCB;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 10px;
+  font-size: 25px;
+  height: 100px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+body .padre .teclas {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+body .padre .teclas .fila {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .padre .teclas .fila span {
+  border: 1px solid #B2ACAC;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background-color: #979CB2;
+  color: #eef3fa;
+  transition: 0.5s;
+  cursor: pointer;
+  /*
+  &#os{
+      background-color: #817b71;
+  }
+  */
+}
+body .padre .teclas .fila span:hover {
+  background-color: #84899c;
+  border: 1px solid #84899c;
+}
+body .padre .teclas .fila span ion-icon {
+  width: 50%;
+  height: 50%;
+}
+body .padre .teclas .fila span.naranja {
+  background-color: #FF7F02;
+  border: #FF7F02;
+}
+body .padre .teclas .fila span.azul {
+  background-color: #2D86DE;
+  border: #2D86DE;
+}
+body .padre .teclas .fila span.color-n {
+  background-color: #505A62;
+  border-color: #505A62;
+}
+body.light {
+  transition: 0.5s;
+  background-color: #fff;
+}
+body.light .padre {
+  background-color: #ebe9ed;
+  box-shadow: 0 0 10px rgb(196, 175, 175);
+  border: 1px solid rgba(131, 131, 131, 0.395);
+}
+body.light .padre .pantalla {
+  background-color: #fff;
+  color: rgb(136, 128, 128);
+}
+body.light .padre .teclas .fila span {
+  background-color: #fefdfb;
+  color: #170e03;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 1px solid rgb(241, 239, 239);
+}
+body.light .padre .teclas .fila span:hover {
+  border: 1px solid #abaeae;
+}
+body.light .padre .teclas .fila span.naranja {
+  background-color: #99cafb;
+  border: #99cafb;
+}
+body.light .padre .teclas .fila span.naranja:hover {
+  background-color: #89b7e5;
+  border: #0080fd;
+}
+body.light .padre .teclas .fila span.azul {
+  background-color: #e2a57f;
+  border: #d27921;
+  color: rgb(244, 239, 239);
+}
+body.light .padre .teclas .fila span.azul:hover {
+  background-color: #cf9774;
+}
+body.light .padre .teclas .fila span.color-n {
+  background-color: #d2cbc5;
+  border-color: #afa59d;
+}
+body.light .padre .teclas .fila span.color-n:hover {
+  background-color: #a4a09c;
+  border-color: #928a82;
+  color: #fff;
+}/*# sourceMappingURL=estilos.css.map */
