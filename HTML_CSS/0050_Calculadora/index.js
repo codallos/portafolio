@@ -133,24 +133,63 @@ botonPunto.addEventListener('click', ()=>{
     let resultadoActual = pantalla.innerHTML;
     let ultimoCaracter = pantalla.innerHTML[pantalla.innerHTML.length-1];
     let cadenaInterna = resultadoActual+'.'; // el ultimo caracter de la cadena interna siempre va a ser el .
+    let ultimoCaracterCadenaInterna = '.'
     let numerPuntos = cadenaInterna.split('.').length-1;
-    let cuentaMas = cadenaInterna.split('+').length-1
+    let cuentaMas = cadenaInterna.split('+')
+    cuentaMas = cuentaMas[cadenaInterna.split('+').length-1]
 
     console.log('')
     console.log('El resultado actual es',resultadoActual);
     console.log('El ultimo caracter real:',ultimoCaracter);
     console.log('la cadena interna es', cadenaInterna);
     console.log('Numero de puntos', numerPuntos);
-    console.log('Numero de +', cuentaMas)
+    console.log('ultima expresion ingresada', cuentaMas);
+
+    let converFlotante = parseFloat(cuentaMas);
+    console.log(converFlotante)
+    console.log(Number.isInteger(converFlotante))
 
 
-    if (ultimoCaracter !== '.'){
+    if (resultadoActual == 0 || resultadoActual == '' ){
 
-      
-        pantalla.innerHTML+='.'
+        pantalla.innerHTML='0.'
+        console.log('estas en el if') 
 
-       
+    }else if (ultimoCaracter == '.' && ultimoCaracterCadenaInterna == '.' ){
 
+        pantalla.innerHTML=resultadoActual
+        console.log('estas en el primer else if')
+
+    }else if (ultimoCaracter == '+' && ultimoCaracterCadenaInterna == '.'){
+
+        pantalla.innerHTML=resultadoActual+'0.'
+        console.log('estas en el terver else if')
+
+    }else if (Number.isInteger(converFlotante) && converFlotante > 0){ // evita que en el primer ingreso se colocquen 2 puntos
+
+        pantalla.innerHTML=cadenaInterna
+        console.log('estas en el 2do else if');
+        let ahoraString = converFlotante.toString()
+        console.log(ahoraString);
+
+    }else if (converFlotante <= 0){
+
+        let ahoraString = converFlotante.toString();
+        ahoraString=ahoraString+'.';
+        console.log('estas en las pruebas');
+        let nuevoInput = resultadoActual.split('+')
+        nuevoInput.pop();
+        nuevoInput.push(ahoraString)
+        let textoFinal = nuevoInput.join('+')
+        console.log(textoFinal)
+        pantalla.innerHTML = textoFinal
+
+
+    }
+    
+    else{
+        console.log('estas en el else')
+        
     }
 
 });
@@ -169,7 +208,7 @@ botonPorcentaje.addEventListener('click',()=>{
         pantalla.innerHTML = 0
 
     }else{
-        let operacion = eval(resultadoActual)/100
+        let operacion = (eval(resultadoActual))/100
         pantalla.innerHTML = operacion
 
     }
