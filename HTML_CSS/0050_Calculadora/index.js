@@ -47,8 +47,32 @@ function teclasEspeciales(botonGenerico){
     botonGenerico.addEventListener('click', () => {
 
         let resultadoActual = pantalla.innerHTML;
-        if(resultadoActual[resultadoActual.length-1] !== botonGenerico.innerHTML){  
-            pantalla.innerHTML = pantalla.innerHTML + botonGenerico.innerHTML;
+        let ultimoCaracter = resultadoActual[resultadoActual.length-1];
+
+        if(ultimoCaracter !== '%' && ultimoCaracter !== '/' && ultimoCaracter !== 'x' && ultimoCaracter !== '-' &&  ultimoCaracter !== '+'  &&  ultimoCaracter !== '.' ){  
+            
+            if(botonGenerico.innerHTML == 'x'){
+
+                pantalla.innerHTML = pantalla.innerHTML + '*';
+               
+
+            }else{
+
+                pantalla.innerHTML = pantalla.innerHTML + botonGenerico.innerHTML;
+                console.log(ultimoCaracter);
+               
+
+            }
+
+        
+        // }else if(botonGenerico.innerHTML === '.' && ultimoCaracter !== '.'){
+        //     console.log(ultimoCaracter);
+        //     console.log(botonGenerico);
+        //     pantalla.innerHTML = pantalla.innerHTML + botonGenerico.innerHTML;
+        //     console.log('estas en el else if');
+           
+
+        // }
         }else{
             console.log('repetido');
         }
@@ -69,12 +93,13 @@ botonPorcentaje.addEventListener('click', () => {
     }
 });*/
 
-teclasEspeciales(botonPorcentaje);
+//teclasEspeciales(botonPorcentaje);
+
 teclasEspeciales(botonDivision);
 teclasEspeciales(botonMultiplicacion);
 teclasEspeciales(botonResta);
 teclasEspeciales(botonSuma);
-teclasEspeciales(botonPunto);
+
 
 /* teclado numerico*/
 
@@ -98,6 +123,77 @@ teclasNumericas(botonSeis);
 teclasNumericas(botonSiete);
 teclasNumericas(botonOcho);
 teclasNumericas(botonNueve);
+
+
+
+/* Tecla punto */
+
+botonPunto.addEventListener('click', ()=>{
+    
+    let resultadoActual = pantalla.innerHTML;
+    let ultimoCaracter = pantalla.innerHTML[pantalla.innerHTML.length-1];
+    let cadenaInterna = resultadoActual+'.'; // el ultimo caracter de la cadena interna siempre va a ser el .
+    let numerPuntos = cadenaInterna.split('.').length-1;
+    let cuentaMas = cadenaInterna.split('+').length-1
+
+    console.log('')
+    console.log('El resultado actual es',resultadoActual);
+    console.log('El ultimo caracter real:',ultimoCaracter);
+    console.log('la cadena interna es', cadenaInterna);
+    console.log('Numero de puntos', numerPuntos);
+    console.log('Numero de +', cuentaMas)
+
+
+    if (ultimoCaracter !== '.'){
+
+      
+        pantalla.innerHTML+='.'
+
+       
+
+    }
+
+});
+
+/* boton porcentale*/
+
+botonPorcentaje.addEventListener('click',()=>{
+
+    let resultadoActual = pantalla.innerHTML
+    console.log('click');
+    if (resultadoActual == '' ){
+
+        pantalla.innerHTML = 0
+
+    }else if (resultadoActual == 0){
+        pantalla.innerHTML = 0
+
+    }else{
+        let operacion = eval(resultadoActual)/100
+        pantalla.innerHTML = operacion
+
+    }
+    
+
+})
+
+/* boton igual*/
+
+botonIgual.addEventListener('click',()=>{
+
+    let resultadoActual = pantalla.innerHTML
+    console.log('click');
+    if (resultadoActual == ''){
+
+        pantalla.innerHTML = 0
+
+    }else{
+        let operacion = eval(resultadoActual)
+        pantalla.innerHTML = operacion
+
+    }
+    
+});
 
 
 /*Cambio de tema*/
