@@ -73,7 +73,30 @@ function teclasEspeciales(botonGenerico){
            
 
         // }
-        }else{
+        }else if (ultimoCaracter == '.'){
+
+             
+            if(botonGenerico.innerHTML == 'x'){
+
+                pantalla.innerHTML = pantalla.innerHTML + '0' + '*'
+               
+
+            }else{
+
+                pantalla.innerHTML = pantalla.innerHTML + '0' + botonGenerico.innerHTML
+
+                
+            }
+
+
+
+
+            
+
+
+        }
+        
+        else{
             console.log('repetido');
         }
     });
@@ -129,25 +152,78 @@ teclasNumericas(botonNueve);
 /* Tecla punto */
 
 botonPunto.addEventListener('click', ()=>{
+
+    var numerPuntos = 0
     
     let resultadoActual = pantalla.innerHTML;
     let ultimoCaracter = pantalla.innerHTML[pantalla.innerHTML.length-1];
     let cadenaInterna = resultadoActual+'.'; // el ultimo caracter de la cadena interna siempre va a ser el .
     let ultimoCaracterCadenaInterna = '.'
-    let numerPuntos = cadenaInterna.split('.').length-1;
+    //let numerPuntos = cadenaInterna.split('.').length-1;
     let cuentaMas = cadenaInterna.split('+')
     cuentaMas = cuentaMas[cadenaInterna.split('+').length-1]
 
-    console.log('')
+    let lugarDeMas = resultadoActual.lastIndexOf('+')
+    let lugarDeMenos = resultadoActual.lastIndexOf('-')
+    let lugarDePor = resultadoActual.lastIndexOf('*')
+    let lugarDeEntre = resultadoActual.lastIndexOf('/')
+
+    function mayorTodos (lugarDeMas,lugarDeMenos,lugarDePor,lugarDeEntre){
+
+        console.log('Mas: ', lugarDeMas)
+        console.log('Menos: ', lugarDeMenos)
+        console.log('Por: ', lugarDePor)
+        console.log('Entre: ', lugarDeEntre)
+
+
+        let seleccionCorte = Math.max(lugarDeMas,lugarDeMenos,lugarDePor,lugarDeEntre)
+        let caracterDeCorte = resultadoActual[seleccionCorte]
+        console.log(caracterDeCorte)
+
+        if (caracterDeCorte == undefined){
+            numerPuntos=resultadoActual.split('.').length-1
+            console.log('funcion',numerPuntos)
+            return resultadoActual+'.'
+            
+        } else{
+
+            let corteCadena = cadenaInterna.split(caracterDeCorte)
+            let ultimaExpresionOk = corteCadena[corteCadena.length-1]
+            console.log('funcion else',numerPuntos)
+            numerPuntos = ultimaExpresionOk.split('.').length-2;
+    
+            return ultimaExpresionOk
+
+        }
+
+
+
+    }
+
+   
+
+
+
+
+    console.log('---') 
+    let miCorte = mayorTodos(lugarDeMas,lugarDeMenos,lugarDePor,lugarDeEntre)
+
     console.log('El resultado actual es',resultadoActual);
     console.log('El ultimo caracter real:',ultimoCaracter);
     console.log('la cadena interna es', cadenaInterna);
-    console.log('Numero de puntos', numerPuntos);
+    //console.log('Numero de puntos', numerPuntos);
     console.log('ultima expresion ingresada', cuentaMas);
+    console.log('ultima expresion ingresada2', miCorte);
 
     let converFlotante = parseFloat(cuentaMas);
-    console.log(converFlotante)
+    let converFlotanteDos = parseFloat(miCorte)
+
+    console.log('Conversion 1',converFlotante)
     console.log(Number.isInteger(converFlotante))
+
+    console.log('Conversion 2',converFlotanteDos)
+    console.log(Number.isInteger(converFlotanteDos))
+
 
 
     if (resultadoActual == 0 || resultadoActual == '' ){
@@ -160,29 +236,48 @@ botonPunto.addEventListener('click', ()=>{
         pantalla.innerHTML=resultadoActual
         console.log('estas en el primer else if')
 
-    }else if (ultimoCaracter == '+' && ultimoCaracterCadenaInterna == '.'){
+    }else if ((ultimoCaracter == '+'|| ultimoCaracter == '-'|| ultimoCaracter == '*'|| ultimoCaracter == '/') && ultimoCaracterCadenaInterna == '.'){
 
         pantalla.innerHTML=resultadoActual+'0.'
-        console.log('estas en el terver else if')
+        console.log('estas en el segundo else if')
 
-    }else if (Number.isInteger(converFlotante) && converFlotante > 0){ // evita que en el primer ingreso se colocquen 2 puntos
+    }else if (Number.isInteger(converFlotanteDos) && converFlotanteDos > 0 && numerPuntos == 0){ // evita que en el primer ingreso se colocquen 2 puntos
 
         pantalla.innerHTML=cadenaInterna
-        console.log('estas en el 2do else if');
-        let ahoraString = converFlotante.toString()
+        console.log('estas en el tercer else if');
+        let ahoraString = converFlotanteDos.toString()
         console.log(ahoraString);
 
-    }else if (converFlotante <= 0){
+    }else if (converFlotanteDos <= 0){
 
-        let ahoraString = converFlotante.toString();
-        ahoraString=ahoraString+'.';
+        //let ahoraString = converFlotante.toString();
+        let ahoraString2 = converFlotanteDos.toString()
+
+
+        //ahoraString=ahoraString+'.';
+        ahoraString2=ahoraString2+'.'
+
         console.log('estas en las pruebas');
-        let nuevoInput = resultadoActual.split('+')
-        nuevoInput.pop();
-        nuevoInput.push(ahoraString)
-        let textoFinal = nuevoInput.join('+')
-        console.log(textoFinal)
-        pantalla.innerHTML = textoFinal
+
+        //let nuevoInput = resultadoActual.split('+')
+
+
+        let seleccionCorte = Math.max(lugarDeMas,lugarDeMenos,lugarDePor,lugarDeEntre)
+        let caracterDeCorte = resultadoActual[seleccionCorte]
+        let nuevoInput2 = resultadoActual.split(caracterDeCorte)
+        nuevoInput2.pop();
+        nuevoInput2.push(ahoraString2)
+        let textoFinal2 = nuevoInput2.join(caracterDeCorte)
+
+
+        //let ultimaExpresionOk = corteCadena[corteCadena.length-1]
+
+         
+        //nuevoInput.pop();
+        //nuevoInput.push(ahoraString)
+        //let textoFinal = nuevoInput.join('+')
+        console.log(textoFinal2)
+        pantalla.innerHTML = textoFinal2
 
 
     }
