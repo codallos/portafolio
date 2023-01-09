@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    background-color: #363636;
+    color: #fff;
+    min-height: 100vh;
+    font-size: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,29 +1,270 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codallos</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    
+
 </head>
+
 <body>
+    
+    <div class="container">
+        <header class="header" id="header">
+            <ion-icon class="header__mode header__mode--movile" name="moon-outline"></ion-icon>
+            <nav class="header__nav" id="header__nav">
+                <ion-icon class="header__menu header__menu--movile" id="header__menu-movile" name="menu-outline"></ion-icon>
+                <ul class="header__ul" id="header__ul">
+                    <li class="header__li"><a class="header__a" role="button" href="#home">Home</a></li>
+                    <li class="header__li"><a class="header__a" role="button" href="#skills">Skills</a></li>
+                    <li class="header__li"><a class="header__a" role="button" href="#portfolio">Portfolio</a></li>
+                    <li class="header__li"><a class="header__a" role="button" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="main">
+            <section class="home" id="home">
+                <div class="home__profile">
+                    <div class="home__cont-img">
+                        <img class="home__img" src="./img/yo.png" alt="photo">
+                    </div>
+
+                    <p class="home__name">Hi, I'm <b class="home__color-name">Jose Miguel Codallos</b></p>
+                    <p class="home__p">Industrial Engeenier <span id="home__animation1">and</span></p>
+                    <h2 class="home__description"> 
+                        <span class="home__animation--none" id="home__animation2">&lt;Frontend</span>
+                        <span class="home__animation--none" id="home__animation3">Web</span>
+                        <span class="home__animation--none" id="home__animation4">Developer/&gt;</span>                        
+                    </h2>
+                </div>
+            </section>
+
+            <!-- <section class="about" id="about"></section> -->
+            <section class="skills" id="skills">
+                <h2 class="section-name">
+                    Skills and Experience
+                </h2>
+
+                <div class="skills__buttons" id="skills__buttons">
+
+                    <button type="button" class="button  button--focus">
+                        Skills
+                    </button>
+
+                    <button type="button" class="button">
+                        Experience
+                    </button>
+
+                </div>
+
+                <div class="skills__experiences-container">
+                    <div class="skills__icons">
+                        <ion-icon class="skills__icon skills__icon--orange" name="logo-html5"></ion-icon>
+                        <ion-icon class="skills__icon skills__icon--yellow" name="logo-javascript"></ion-icon>
+                        <ion-icon class="skills__icon skills__icon--blue" name="logo-css3"></ion-icon>
+                        <ion-icon class="skills__icon skills__icon--blue2" name="logo-react"></ion-icon>
+                        <ion-icon class="skills__icon skills__icon--green" name="logo-nodejs"></ion-icon>
+                        <ion-icon class="skills__icon skills__icon--orange2" name="logo-npm"></ion-icon>
+                        <ion-icon class="skills__icon skills__icon--black skills__icon--github" name="logo-github"></ion-icon>
+                        <i class="skills__icon fa-brands fa-git-alt skills__icon--orange3"></i>
+                        <ion-icon class="skills__icon skills__icon--hiden skills__icon--black2" name="logo-tux"></ion-icon>
+                    </div>
+                   
+                   <div class="skills__experiences skills__experiences--smooth" >
+                  
+                            <div class="skills__experience">
+                                <h3 class="skills__year">
+                                    2022
+                                </h3>
+                                <h3 class="skills__charge">
+                                    Administrative Coordinator, Entry
+        
+                                </h3>
+                                <p class="skills__company"> Ppg Comex</p>
+                            </div>
+                            <div class="skills__experience">
+                                <h3 class="skills__year">
+                                    2021
+                                </h3>
+                                <h3 class="skills__charge">
+                                    Production Assistant
+                                </h3>
+                                <p class="skills__company">Guntner</p>
+                            </div>
+                   
+                        <a class="button button--green" href="./doc/CV_JOSE-MIGUEL-CODALLOS-JUAREZ.pdf" download="CV_Codallos.pdf" role="button">Download CV</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="portfolio" id="portfolio">
+
+                <h2 class="section-name">
+                    Some Projects
+                </h2>
+                <div class="cards">
+
+                    <div class="cards__conteniner">
+                        <img class="cards__img" src="./img/Paypal.jpg" alt="img-project">
+                        <div class="cards__info">
+                            <a href="https://portafoliocodallos.netlify.app/html_css/0004_card_pago/"
+                                class="cards__link">
+
+                                <ion-icon class="cards__icon" name="eye-outline"></ion-icon>
+                            </a>
+                            <a href="https://github.com/codallos/portafolio/tree/main/HTML_CSS/0004_Card_pago"
+                                class="cards__link">
+
+                                <ion-icon class="cards__icon" name="logo-github"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cards__conteniner">
+                        <img class="cards__img" src="./img/menu.jpg" alt="img-project">
+                        <div class="cards__info">
+                            <a href="https://portafoliocodallos.netlify.app/html_css/0007_menu_animado/"
+                                class="cards__link">
+
+                                <ion-icon class="cards__icon" name="eye-outline"></ion-icon>
+                            </a>
+                            <a href="https://github.com/codallos/portafolio/tree/main/HTML_CSS/0007_Menu_animado"
+                                class="cards__link">
+
+                                <ion-icon class="cards__icon" name="logo-github"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cards__conteniner">
+                        <img class="cards__img" src="./img/calc.jpg" alt="img-project">
+                        <div class="cards__info">
+                            <a href="https://portafoliocodallos.netlify.app/html_css/0050_calculadora/"
+                                class="cards__link">
+
+                                <ion-icon class="cards__icon" name="eye-outline"></ion-icon>
+                            </a>
+                            <a href="https://github.com/codallos/portafolio/tree/main/HTML_CSS/0050_Calculadora"
+                                class="cards__link">
+
+                                <ion-icon class="cards__icon" name="logo-github"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cards__conteniner">
+                        <img class="cards__img" src="./img/redux.jpg" alt="img-project">
+                        <div class="cards__info">
+                            <a href="https://main--react-readux-crud.netlify.app/" class="cards__link">
+
+                                <ion-icon class="cards__icon" name="eye-outline"></ion-icon>
+                            </a>
+                            <a href="https://github.com/codallos/react-readux" class="cards__link">
+
+                                <ion-icon class="cards__icon" name="logo-github"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cards__conteniner">
+                        <img class="cards__img" src="./img/nodejs.jpg" alt="img-project">
+                        <div class="cards__info">
+                            <a href="https://crudlibros-ok-production.up.railway.app/" class="cards__link">
+
+                                <ion-icon class="cards__icon" name="eye-outline"></ion-icon>
+                            </a>
+                            <a href="https://github.com/codallos/Crud_Libros" class="cards__link">
+
+                                <ion-icon class="cards__icon" name="logo-github"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cards__conteniner">
+                        <img class="cards__img" src="./img/social.jpg" alt="img-project">
+                        <div class="cards__info">
+                            <a href="./social.html" class="cards__link">
+
+                                <ion-icon class="cards__icon" name="eye-outline"></ion-icon>
+                            </a>
+                            <a href="./social.html" class="cards__link">
+
+                                <ion-icon class="cards__icon" name="logo-github"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="contact" id="contact">
+                <h2 class="section-name">
+                    Contact Me
+                </h2>
+                <div class="contact__main">
+                    <div class="contact__social">
 
 
-    <div class="padre">
-        <a href="/HTML_CSS/0001_Menu_basico/index.html">Menu git hub</a>
-        <a href="/HTML_CSS/0002_Imagenes_apiladas/index.html">Imagenes git</a>
-        <a href="/HTML_CSS/0003_Barra_busqueda/index.html">Menu busqueda</a>
-        <a href="/HTML_CSS/0004_Card_pago/">Card pago</a>
-        <a href="/HTML_CSS/0005_Tarjetas/index.html"> Tarjetas</a>
-        <a href="/HTML_CSS/0006_Hamburguesa/">Pollo</a>
-        <a href="/HTML_CSS/0007_Menu_animado/">Menu animado</a>
-        <a href="./HTML_CSS/0008_Animaciones/index.html">Animacion</a>
-        <a href="./HTML_CSS/0050_Calculadora/index.html">Calculadora</a>
-        <a href="https://main--react-readux-crud.netlify.app/">React-Readux</a>
-        <a href="https://crudlibros-ok-production.up.railway.app/">Express</a>
+                        <h3 class="contact__title">Just say Hi!</h3>
+                        <p class="contact__invitation">Hi, I'm Jose Codallos, I'm passionate about technology and web
+                            development, I really appreciate your visit and I hope we can work together, if you are
+                            interested feel free to contact me. </p>
 
+                        <a class="contact__card" href="https://wa.me/527681030329">
+                            <ion-icon class="contact__icon" name="logo-whatsapp"></ion-icon>
+                            <span>768-103-03-29</span>
+                        </a>
+<!-- 
+                        <a class="contact__card" href="https://t.me/JMCJ4">
+                            <ion-icon class="contact__icon" name="paper-plane-outline"></ion-icon>
+                            <span>JMCJ4</span>
+                        </a> -->
+
+
+                        <div class="contact__card">
+                            <ion-icon class="contact__icon" name="mail-outline"></ion-icon>
+                            <span class="contact__email">jcodallos9712@hotmail.com</span>
+                        </div>
+
+                        <a class="contact__card" href="https://wa.me/527681030329">
+                            <ion-icon class="contact__icon"  name="logo-linkedin"></ion-icon>
+                            <span>José Codallos</span>
+                        </a>
+
+                    </div>
+                    <form class="contact__form" action="https://formsubmit.co/1b20753cde637ae4269e4f2935b6c243"  method="POST">
+                        <h3 class="contact__title">Get in touch</h3>
+                        <input class="contact__input" type="text" name="name" id="name" placeholder="Name">
+                        <input class="contact__input" type="text" name="last-name" id="last-name" placeholder="Last name">
+                        <input class="contact__input" type="tel" name="phone" id="phone" placeholder="Phone number">
+                        <input class="contact__input" type="email" name="E-mail" id="email" placeholder="E-mail" required>
+                        <textarea class="contact__input" name="Message" id="" cols="30" rows="10"
+                            placeholder="Message"></textarea>
+                        <input class="button" type="submit" value="Send">
+                        <input type="hidden" name="_next" value="https://portafoliocodallos.netlify.app/">
+                       
+                    </form>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <p class="footer_copyright">Copyright &copy; 2023 All rights reserved</p>
+        </footer>
     </div>
 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/795f259803.js" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
 </body>
+
 </html>
