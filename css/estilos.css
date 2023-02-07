@@ -582,6 +582,14 @@ html {
     opacity: 0;
 }
 
+.portfolio__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+
 .cards {
     position: relative;
     display: grid;
@@ -599,6 +607,7 @@ html {
     transition-delay: 0.8s;
     border: 1px solid rgba(238, 130, 238, 0.474);
     border-radius: 10px;
+    max-height: 327px;
 }
 
 .cards__img {
@@ -893,6 +902,10 @@ body::-webkit-scrollbar-thumb {
         padding: 0;
  
     }
+
+    .portfolio__buttons{
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -1130,6 +1143,7 @@ body::-webkit-scrollbar-thumb {
     .header__ul{
         display: none;
     }
+
 
 
 

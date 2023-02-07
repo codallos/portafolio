@@ -183,8 +183,8 @@ const skillsExperiences = document.querySelector(".skills__experiences")
 let heightSkillsExperiences = skillsExperiences.offsetWidth;
 let heightskillsIcons = skillsIcons.clientHeight;
 let heightskillsIconsAuto = 0
-console.log(skillsIcons)
-console.log(heightskillsIcons)
+//console.log(skillsIcons)
+//console.log(heightskillsIcons)
 let skillsButtonsArray = [...skillsButtons.children]
 
 
@@ -204,7 +204,7 @@ skillsButtons.addEventListener('click', e =>{
             //console.log("Es boton")
             if (button.innerText === e.target.innerText){
 
-               console.log("estas en el if")
+               //console.log("estas en el if")
                 skillsIcons.style.height=heightskillsIcons*0 +'px'
                 //skillsExperiences.style.height=heightskillsIcons*1 +'px' //Exp
                 e.target.classList.add("button--focus")
@@ -215,7 +215,7 @@ skillsButtons.addEventListener('click', e =>{
             }else{
 
                 skillsIcons.style.height=heightskillsIcons*1 +'px'
-                console.log("En el else",heightskillsIcons)
+                //console.log("En el else",heightskillsIcons)
                 
                 //skillsExperiences.style.height=heightskillsIcons*0 +'px' //Exp
                 button.classList.remove("button--focus")
@@ -237,5 +237,43 @@ skillsButtons.addEventListener('click', e =>{
 
 
 })
+
+//#endregion
+
+
+//#region portfolio
+
+const portfolioButtons = document.getElementById("portfolio__buttons")
+const portfolioweb = document.getElementById("web")
+const portfoliocad = document.getElementById("cad")
+let portafolioButtonsArray = [...portfolioButtons.children]
+portfoliocad.style.display = "none"
+portfolioButtons.addEventListener('click', e =>{
+
+    if(e.target.type=="button"){
+
+        portafolioButtonsArray.forEach(button => {
+ 
+            if (button.innerText === e.target.innerText){
+                e.target.classList.add("button--focus")
+               
+
+            }else{
+
+                button.classList.remove("button--focus")
+
+            }
+        })
+        
+        e.target.innerText.includes("Web") ? portfolioweb.style.display ="grid" : portfolioweb.style.display = "none"
+        e.target.innerText.includes("CAD 2D And 3D") ? portfoliocad.style.display ="grid" : portfoliocad.style.display = "none"
+
+
+
+    }
+
+
+})
+console.log(portfolioweb)
 
 //#endregion
